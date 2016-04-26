@@ -4,11 +4,6 @@
 
 #define vtkSP vtkSmartPointer
 
-enum TIO_RETURN {
-    TIO_FAIL = -1,
-    TIO_SUCCESS = 0
-};
-
 //=============================================================================
 // make_unique per N3656
 // TODO ifdef for C++14
@@ -20,3 +15,8 @@ std::unique_ptr<T> make_unique( Args&& ...args )
 }
 
 } // end namespace std
+
+enum TIO_STATUS {
+    TIO_FAIL = -1,
+    TIO_SUCCESS = 0
+};
